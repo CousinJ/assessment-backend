@@ -1,6 +1,7 @@
 
  const movieInfo = require('./db.json')
-
+ let movieId = 4
+ let favoriteMovies = []
 module.exports = {
 
     getCompliment: (req, res) => {
@@ -23,12 +24,49 @@ module.exports = {
         res.status(200).send(randomFortunes);
     },
    
-    getFavorites: (req, res) => {
+    getMovies: (req, res) => {
            
      res.status(200).send(movieInfo);
     },
 
+   
 
+    createMovie: (req, res) => {
+        const {name, year, imageURL} = req.body
+        let newMovie = {
+            id: movieId,
+            name,
+            year,
+            imageURL,
+            fave: false
+            
+        }
+
+        movieInfo.push(newMovie)
+        movieId += 1
+        res.status(200).send(movieInfo)
+    },
+
+    deleteMovie: (req, res) => { 
+        console.log(req.params.id)
+        let index = movieInfo.findIndex((el)=> {return +el.id === +req.params.id})
+        movieInfo.splice(index, 1)
+        res.status(200).send(movieInfo)
+        
+    },
+
+    makeFave: (req, res) => { 
+        console.log(req.params.id)
+        let index = movieInfo.findIndex((el)=> {return +el.id === +req.params.id})
+        movieInfo[index].fave = true
+        console.log(movieInfo[index].fave)
+        favoriteMovies.push(movieInfo[index].name)
+        res.status(200).send(movieInfo)
+        console.log(favoriteMovies)
+        
+
+
+    }
 
     
 

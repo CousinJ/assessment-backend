@@ -2,19 +2,25 @@
     {
       "id": 1,
       "name": "Indiana Jones: Raiders of the Lost Arc",
-      "yearReleased": 1985 
+      "yearReleased": 1981,
+      "imageURL" : "https://nostalgiavideo.net/wp-content/uploads/2022/02/81UOBSDQh0L._AC_SL1500_.jpg",
+      "fave": false
       
     },
     {
       "id": 2,
       "name": "Dune",
-      "yearReleased": 2021 
+      "yearReleased": 2021,
+      "imageURL" : "https://th.bing.com/th/id/OIP.CmkoOQ9fO6g-7nS_DB76FgHaJW?pid=ImgDet&rs=1",
+      "fave": false
      
     },
     {
       "id": 3,
       "name": "BladeRunner",
-      "yearReleased": 1984
+      "yearReleased": 1982,
+      "imageURL" : "https://blogs.colum.edu/intheloop/files/2017/09/blade_runner_fondo.jpg",
+      "fave": false
        
     }
   ]

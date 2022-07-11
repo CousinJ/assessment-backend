@@ -2,13 +2,39 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
     <button id="fortuneButton">Get Fortune</button>
     <button id="favoriteButton">Get favorite movies</button>
-    <button id="searchButton">Search for Movie </button>
     
+
+
+    <main>
+      <form>
+        <input 
+            type='text'
+            id="name"
+            placeholder="movie name"/>
+        <input 
+            type='text'
+            id="year"
+            placeholder='year?'/>
+        <input 
+            type='text'
+            id="img"
+            placeholder='Paste an image URL'/>
+        <button>add movie</button>
+    </form>
+
+
+
+    </main>
+    
+  <section id="movies-container"></section>
+
+  
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
